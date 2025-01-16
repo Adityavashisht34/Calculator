@@ -16,7 +16,6 @@ let count = 0;
 
 const click = document.querySelectorAll(".number").forEach(function(item){
     item.addEventListener('click',function(event){
-        console.log(event.target.getAttribute('data-value'));
     number = number+event.target.getAttribute('data-value');
     display.innerText = number;
 });
@@ -60,12 +59,10 @@ function lastOperator(LOp){
     }
 };
 equals.addEventListener('click', function(){
-    console.log(ans);
    lastOperator(LOp);
 })
 // 2 + 1 - 3
 function addition(n1,n2){
-    console.log("Number = "+ number);
     lastOperator(LOp);
     if(n1==''){
     ans = n2;
@@ -89,7 +86,6 @@ function subtraction(n1 ,n2){
    if(n1==''){
     ans = n2;
    }
-    console.log(ans);
     LOp = 'multiply';
     display.style.color = "white";
     number = "";
@@ -99,7 +95,6 @@ function subtraction(n1 ,n2){
     if(n1==''){
     ans = n2;
    }
-    console.log(ans);
     LOp = 'divide';
     display.style.color = "white";
     number = "";
