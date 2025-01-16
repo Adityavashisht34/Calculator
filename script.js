@@ -13,11 +13,6 @@ let number = "";
 let LOp = '';
 let count = 0;
 
-const modeToggleButton = document.getElementById('mode-toggle');
-        modeToggleButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-
 
 const click = document.querySelectorAll(".number").forEach(function(item){
     item.addEventListener('click',function(event){
